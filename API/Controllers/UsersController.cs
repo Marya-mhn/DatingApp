@@ -7,12 +7,9 @@ using API.Data;
 using Microsoft.EntityFrameworkCore;
 using API.Entities;
 
-
 namespace API.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class UsersController : ControllerBase 
+    public class UsersController : BaseApiController
     {
         private readonly DataContext _context;
 
@@ -29,9 +26,9 @@ namespace API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async  Task<ActionResult<AppUser>> GetUser(int id)
+        public async Task<ActionResult<AppUser>> GetUser(int id)
         {
-            return  await _context.users.FindAsync(id);
+            return await _context.users.FindAsync(id);
         }
     }
 }
