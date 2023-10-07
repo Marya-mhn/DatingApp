@@ -2,16 +2,19 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.API PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="API/Controllers/UsersController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="API/Controllers/AccountController.cs">
     <Files>
-      <File FileName="API/Controllers/UsersController.cs" Line="25" Column="45" />
-      <File FileName="API/Program.cs" Line="1" Column="1" />
+      <File FileName="API/Controllers/UsersController.cs" Line="5" Column="1" />
+      <File FileName="API/Program.cs" />
       <File FileName="API/Data/DataContext.cs" Line="16" Column="32" />
+      <File FileName="API/API.csproj" Line="1" Column="1" />
+      <File FileName="API/Controllers/BaseApiController.cs" Line="14" Column="46" />
+      <File FileName="API/Controllers/AccountController.cs" Line="34" Column="23" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="DatingApp" expanded="True" selected="True">
+          <Node name="DatingApp">
             <Node name="API" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True">
@@ -23,6 +26,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

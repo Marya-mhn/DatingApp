@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YUzx9C7zFZ7ySi5EPzqU9I9ZqUwV/3Jgj+pLwPsZ1JfDmj8occyt0WdTWdB8nQrQRC6s6VdUVNgnKzv8iYiOBA==",
+  "dgSpecHash": "i0F/m7ve3y35VMD1KrxdW+bfOkVufeStPZP0vw8UcscL94PvD2bDQjSFfujmoF5+8OnQenfG23J1uxrsGg26eQ==",
   "success": true,
   "projectFilePath": "/Users/maryamachane/DatingApp/API/API.csproj",
   "expectedPackageFiles": [
@@ -25,6 +25,10 @@
     "/Users/maryamachane/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.0/microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "/Users/maryamachane/.nuget/packages/microsoft.extensions.options/7.0.0/microsoft.extensions.options.7.0.0.nupkg.sha512",
     "/Users/maryamachane/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "/Users/maryamachane/.nuget/packages/microsoft.identitymodel.abstractions/7.0.2/microsoft.identitymodel.abstractions.7.0.2.nupkg.sha512",
+    "/Users/maryamachane/.nuget/packages/microsoft.identitymodel.jsonwebtokens/7.0.2/microsoft.identitymodel.jsonwebtokens.7.0.2.nupkg.sha512",
+    "/Users/maryamachane/.nuget/packages/microsoft.identitymodel.logging/7.0.2/microsoft.identitymodel.logging.7.0.2.nupkg.sha512",
+    "/Users/maryamachane/.nuget/packages/microsoft.identitymodel.tokens/7.0.2/microsoft.identitymodel.tokens.7.0.2.nupkg.sha512",
     "/Users/maryamachane/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
     "/Users/maryamachane/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
     "/Users/maryamachane/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.1.4/sqlitepclraw.bundle_e_sqlite3.2.1.4.nupkg.sha512",
@@ -36,6 +40,7 @@
     "/Users/maryamachane/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.4.0/swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
     "/Users/maryamachane/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.4.0/swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
     "/Users/maryamachane/.nuget/packages/system.codedom/4.4.0/system.codedom.4.4.0.nupkg.sha512",
+    "/Users/maryamachane/.nuget/packages/system.identitymodel.tokens.jwt/7.0.2/system.identitymodel.tokens.jwt.7.0.2.nupkg.sha512",
     "/Users/maryamachane/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
     "/Users/maryamachane/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
     "/Users/maryamachane/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512"

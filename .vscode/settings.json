@@ -1,0 +1,4 @@
+{
+  "dotnet.preferRuntimeFromSDK": true,
+  "nuget.autoOpenOutputWindowOnRestore": "on"
+}
