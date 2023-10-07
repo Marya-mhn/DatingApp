@@ -1,33 +1,40 @@
-﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{8F693635-F415-44A6-9A99-F861A00F9CC9}|Default">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.API PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="API/Controllers/AccountController.cs">
+﻿<Properties GitUserInfo="UsingGIT" BuildWithMSBuildOnMono="True" StartupConfiguration="{8F693635-F415-44A6-9A99-F861A00F9CC9}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../Applications/Visual Studio.app/Contents/MonoBundle/MSBuild/Current/bin/Microsoft.Common.CurrentVersion.targets">
     <Files>
-      <File FileName="API/Controllers/UsersController.cs" Line="5" Column="1" />
+      <File FileName="API/Controllers/UsersController.cs" />
       <File FileName="API/Program.cs" />
-      <File FileName="API/Data/DataContext.cs" Line="16" Column="32" />
-      <File FileName="API/API.csproj" Line="1" Column="1" />
-      <File FileName="API/Controllers/BaseApiController.cs" Line="14" Column="46" />
-      <File FileName="API/Controllers/AccountController.cs" Line="34" Column="23" />
+      <File FileName="API/Data/DataContext.cs" />
+      <File FileName="API/API.csproj" />
+      <File FileName="API/Controllers/BaseApiController.cs" />
+      <File FileName="API/Controllers/AccountController.cs" />
+      <File FileName="../../../Applications/Visual Studio.app/Contents/MonoBundle/MSBuild/Current/bin/Microsoft.Common.CurrentVersion.targets" Line="841" Column="64" />
+      <File FileName="API/appsettings.Development.json" />
+      <File FileName="API/DTOs/UserDto.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="DatingApp">
-            <Node name="API" expanded="True">
+            <Node name="API">
               <Node name="Controllers" expanded="True" />
-              <Node name="Data" expanded="True">
-                <Node name="Migrations" expanded="True" />
-              </Node>
+              <Node name="DTOs" expanded="True" />
+              <Node name="Entities" expanded="True" />
+              <Node name="Interfaces" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Services" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/maryamachane/DatingApp/API/Controllers/UsersController.cs" relfile="API/Controllers/UsersController.cs" line="34" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.API PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

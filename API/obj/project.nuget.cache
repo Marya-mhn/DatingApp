@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "i0F/m7ve3y35VMD1KrxdW+bfOkVufeStPZP0vw8UcscL94PvD2bDQjSFfujmoF5+8OnQenfG23J1uxrsGg26eQ==",
+  "dgSpecHash": "7kIQ54R9+nns0OFVSprW6QEcJCK99FSey6HmQyBfzx6wUndnkTWuMsocixtAcCuhEGmeLiAeogXGFR+xLQTUZg==",
   "success": true,
   "projectFilePath": "/Users/maryamachane/DatingApp/API/API.csproj",
   "expectedPackageFiles": [
     "/Users/maryamachane/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/Users/maryamachane/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/7.0.11/microsoft.aspnetcore.authentication.jwtbearer.7.0.11.nupkg.sha512",
     "/Users/maryamachane/.nuget/packages/microsoft.aspnetcore.openapi/7.0.0/microsoft.aspnetcore.openapi.7.0.0.nupkg.sha512",
     "/Users/maryamachane/.nuget/packages/microsoft.data.sqlite.core/7.0.11/microsoft.data.sqlite.core.7.0.11.nupkg.sha512",
     "/Users/maryamachane/.nuget/packages/microsoft.entityframeworkcore/7.0.11/microsoft.entityframeworkcore.7.0.11.nupkg.sha512",
@@ -28,6 +29,8 @@
     "/Users/maryamachane/.nuget/packages/microsoft.identitymodel.abstractions/7.0.2/microsoft.identitymodel.abstractions.7.0.2.nupkg.sha512",
     "/Users/maryamachane/.nuget/packages/microsoft.identitymodel.jsonwebtokens/7.0.2/microsoft.identitymodel.jsonwebtokens.7.0.2.nupkg.sha512",
     "/Users/maryamachane/.nuget/packages/microsoft.identitymodel.logging/7.0.2/microsoft.identitymodel.logging.7.0.2.nupkg.sha512",
+    "/Users/maryamachane/.nuget/packages/microsoft.identitymodel.protocols/6.15.1/microsoft.identitymodel.protocols.6.15.1.nupkg.sha512",
+    "/Users/maryamachane/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/6.15.1/microsoft.identitymodel.protocols.openidconnect.6.15.1.nupkg.sha512",
     "/Users/maryamachane/.nuget/packages/microsoft.identitymodel.tokens/7.0.2/microsoft.identitymodel.tokens.7.0.2.nupkg.sha512",
     "/Users/maryamachane/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
     "/Users/maryamachane/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
