@@ -17,7 +17,7 @@
     </button> -->
 
     <div class="collapse navbar-collapse" id="navbarsExample03">
-      <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+      <ul *ngIf="loggedIn" class="navbar-nav me-auto mb-2 mb-sm-0">
         <li class="nav-item">
           <a class="nav-link" href="#">Matches</a>
         </li>
@@ -28,7 +28,21 @@
           <a class="nav-link">Messages</a>
         </li>
       </ul>
+
+      <div class="dropdown" *ngIf="loggedIn" dropdown>
+        <a
+          class="dropdown-toggle text-light text-decoration-none"
+          dropdownToggle
+          >Welcome user</a
+        >
+        <div class="dropdown-menu" *dropdownMenu>
+          <a class="dropdown-item">Edit Profile</a>
+          <a class="dropdown-item" (click)="logout()">Logout</a>
+        </div>
+      </div>
+
       <form
+        *ngIf="!loggedIn"
         #loginForm="ngForm"
         (ngSubmit)="login()"
         autocomplete="off"
