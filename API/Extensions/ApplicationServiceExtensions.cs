@@ -26,6 +26,7 @@ namespace API.Extensions
             services.AddSwaggerGen();
             services.AddCors();
             services.AddScoped<ITokenService, TokenService>();
+            services.AddScoped<IUserRepository, UserRepository>();
 
             return services;
         }
