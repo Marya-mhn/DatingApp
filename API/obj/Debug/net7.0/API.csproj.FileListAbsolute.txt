@@ -76,3 +76,5 @@
 /Users/maryamachane/DatingApp/API/obj/Debug/net7.0/API.genruntimeconfig.cache
 /Users/maryamachane/DatingApp/API/obj/Debug/net7.0/ref/API.dll
 /Users/maryamachane/DatingApp/API/bin/Debug/net7.0/Data/UserSeedData.json
+/Users/maryamachane/DatingApp/API/bin/Debug/net7.0/AutoMapper.dll
+/Users/maryamachane/DatingApp/API/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
