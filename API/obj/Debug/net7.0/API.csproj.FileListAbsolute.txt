@@ -8,6 +8,7 @@
 /Users/maryamachane/DatingApp/API/bin/Debug/net7.0/API.pdb
 /Users/maryamachane/DatingApp/API/bin/Debug/net7.0/AutoMapper.dll
 /Users/maryamachane/DatingApp/API/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/maryamachane/DatingApp/API/bin/Debug/net7.0/CloudinaryDotNet.dll
 /Users/maryamachane/DatingApp/API/bin/Debug/net7.0/Humanizer.dll
 /Users/maryamachane/DatingApp/API/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
 /Users/maryamachane/DatingApp/API/bin/Debug/net7.0/Microsoft.AspNetCore.OpenApi.dll
@@ -26,6 +27,7 @@
 /Users/maryamachane/DatingApp/API/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
 /Users/maryamachane/DatingApp/API/bin/Debug/net7.0/Microsoft.OpenApi.dll
 /Users/maryamachane/DatingApp/API/bin/Debug/net7.0/Mono.TextTemplating.dll
+/Users/maryamachane/DatingApp/API/bin/Debug/net7.0/Newtonsoft.Json.dll
 /Users/maryamachane/DatingApp/API/bin/Debug/net7.0/SQLitePCLRaw.batteries_v2.dll
 /Users/maryamachane/DatingApp/API/bin/Debug/net7.0/SQLitePCLRaw.core.dll
 /Users/maryamachane/DatingApp/API/bin/Debug/net7.0/SQLitePCLRaw.provider.e_sqlite3.dll
@@ -78,5 +80,3 @@
 /Users/maryamachane/DatingApp/API/obj/Debug/net7.0/API.pdb
 /Users/maryamachane/DatingApp/API/obj/Debug/net7.0/API.genruntimeconfig.cache
 /Users/maryamachane/DatingApp/API/obj/Debug/net7.0/ref/API.dll
-/Users/maryamachane/DatingApp/API/bin/Debug/net7.0/CloudinaryDotNet.dll
-/Users/maryamachane/DatingApp/API/bin/Debug/net7.0/Newtonsoft.Json.dll

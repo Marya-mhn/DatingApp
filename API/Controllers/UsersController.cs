@@ -7,6 +7,7 @@ using API.Data;
 using Microsoft.EntityFrameworkCore;
 using API.Entities;
 using API.Interfaces;
+using API.Services;
 using Microsoft.AspNetCore.Authorization;
 using AutoMapper;
 using API.DTOs;
@@ -26,6 +27,7 @@ namespace API.Controllers
         {
             _mapper = mapper;
             _userRepository = userRepository;
+            _photoService = photoService;
         }
 
         [HttpGet]
@@ -77,7 +79,11 @@ namespace API.Controllers
 
             user.Photos.Add(photo);
 
-            if (await _userRepository.SaveAllAsync()) return _mapper.Map<PhotoDto>(photo);
+            if (await _userRepository.SaveAllAsync())
+            {
+                return CreatedAtAction(nameof(GetUser),
+                    new { username = user.UserName }, _mapper.Map<PhotoDto>(photo));
+            }
 
             return BadRequest("Problem adding photo");
         }
