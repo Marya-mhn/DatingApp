@@ -8,7 +8,9 @@ using API.Data;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using API.DTOs;
-using AutoMapper.QueryableExtensions; 
+using API.Helpers;
+using API.Extensions;
+using AutoMapper.QueryableExtensions;
 
 namespace API.Data
 {
@@ -19,7 +21,7 @@ namespace API.Data
 
         public UserRepository(DataContext context, IMapper mapper)
         {
-            _context = context; 
+            _context = context;
             _mapper = mapper;
         }
 
@@ -48,13 +50,14 @@ namespace API.Data
             return await _context.users.Include(p => p.Photos).SingleOrDefaultAsync(x => x.UserName == username);
         }
 
-        public async Task<IEnumerable<MemberDto>> GetMembersAsync()
+        public async Task<PagedList<MemberDto>> GetMembersAsync(UserParams userParams)
         {
-            return await _context.users
+            var query = _context.users
                 .ProjectTo<MemberDto>(_mapper.ConfigurationProvider)
-                .ToListAsync();
+                .AsNoTracking();
+            return await PagedList<MemberDto>.CreateAsync(query, userParams.PageNumber, userParams.PageSize);
         }
-        
+
         public async Task<MemberDto> GetMemberAsync(string username)
         {
             return await _context.users
