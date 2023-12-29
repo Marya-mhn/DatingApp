@@ -12,7 +12,9 @@ export class ListsComponent implements OnInit {
   predicate = 'liked';
 
   constructor(private memberService: MembersService) {}
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.loadLikes();
+  }
 
   loadLikes() {
     this.memberService.getLikes(this.predicate).subscribe({

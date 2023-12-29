@@ -25,4 +25,10 @@
       </button>
     </div>
   </div>
+
+  <div class="row mt-3">
+    <div class="col-2" *ngFor="let member of members">
+      <app-member-card [member]="member"></app-member-card>
+    </div>
+  </div>
 </div>
