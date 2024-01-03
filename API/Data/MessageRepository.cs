@@ -6,6 +6,7 @@ using API.Interfaces;
 using API.DTOs;
 using API.Entities;
 using API.Data;
+using API.Helpers;
 
 namespace API.Data
 {
@@ -30,7 +31,15 @@ namespace API.Data
         }
 
         public async Task<bool> SaveAllAsync(){
-            return await _context.SaveChangesAsync() > 0
+            return await _context.SaveChangesAsync() > 0;
+        }
+
+        public async Task<PagedList<MessageDto>> GetMessagesForUser(){
+            return new PagedList<MessageDto>(new List<MessageDto>(), 0, 0, 0);
+        }
+        public async Task<IEnumerable<MessageDto>> GetMessagesForUser(int currentUserId, int recipientId){
+                        throw new NotImplementedException("GetMessagesForUser method is not implemented.");
+
         }
     }
 }
