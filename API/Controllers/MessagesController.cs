@@ -27,31 +27,36 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<MessageDto>> CreateMessage(CreateMessageDto createMessageDto){
-             var username = User.GetUsername();
+        public async Task<ActionResult<MessageDto>> CreateMessage(CreateMessageDto createMessageDto)
+        {
+            var username = User.GetUsername();
 
-             if(username == createMessageDto.RecipientUsername.ToLower()){
+            if (username == createMessageDto.RecipientUsername.ToLower())
+            {
                 return BadRequest("You cannot send messages to yourself");
-             }
+            }
 
-             var sender = await _userRepository.GetUserByUsernameAsync(username);
-             var recipient = await _userRepository.GetUserByUsernameAsync(createMessageDto.RecipientUsername.ToLower());
+            var sender = await _userRepository.GetUserByUsernameAsync(username);
+            var recipient = await _userRepository.GetUserByUsernameAsync(createMessageDto.RecipientUsername.ToLower());
 
-             if(recipient == null){
+            if (recipient == null)
+            {
                 return NotFound();
-             } 
+            }
 
-             var message = new Message{
+            var message = new Message
+            {
                 Sender = sender,
                 Recipient = recipient,
                 SenderUsername = sender.UserName,
                 RecipientUsername = recipient.UserName,
                 Content = createMessageDto.Content
-             };
+            };
 
             _messageRepository.AddMessage(message);
 
-            if(await _messageRepository.SaveAllAsync()){
+            if (await _messageRepository.SaveAllAsync())
+            {
                 return Ok(_mapper.Map<MessageDto>(message));
             }
 
@@ -59,7 +64,8 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<PagedList<MessageDto>>> GetMessagesForUser([FromQuery] MessageParams messageParams){
+        public async Task<ActionResult<PagedList<MessageDto>>> GetMessagesForUser([FromQuery] MessageParams messageParams)
+        {
             messageParams.Username = User.GetUsername();
 
             var messages = await _messageRepository.GetMessagesForUser(messageParams);
@@ -68,5 +74,14 @@ namespace API.Controllers
 
             return messages;
         }
+
+        [HttpGet("thread/{username}")]
+        public async Task<ActionResult<IEnumerable<MessageDto>>> GetMessageThread(string username)
+        {
+            var currentUsername = User.GetUsername();
+
+            return Ok(await _messageRepository.GetMessagesThread(currentUsername, username));
+        }
     }
+
 }

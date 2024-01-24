@@ -8,6 +8,7 @@ using API.Entities;
 using API.Data;
 using API.Helpers;
 using AutoMapper.QueryableExtensions;
+using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 
 namespace API.Data
@@ -21,29 +22,34 @@ namespace API.Data
             _context = context;
             _mapper = mapper;
         }
-        
-        public void AddMessage(Message message){
+
+        public void AddMessage(Message message)
+        {
             _context.Messages.Add(message);
         }
 
-        public void DeleteMessage(Message message){
+        public void DeleteMessage(Message message)
+        {
             _context.Messages.Remove(message);
         }
 
-        public async Task<Message> GetMessage(int id){
+        public async Task<Message> GetMessage(int id)
+        {
             return await _context.Messages.FindAsync(id);
         }
 
-        public async Task<bool> SaveAllAsync(){
+        public async Task<bool> SaveAllAsync()
+        {
             return await _context.SaveChangesAsync() > 0;
         }
 
-        public async Task<PagedList<MessageDto>> GetMessagesForUser(MessageParams messageParams){
+        public async Task<PagedList<MessageDto>> GetMessagesForUser(MessageParams messageParams)
+        {
             var query = _context.Messages
                 .OrderByDescending(x => x.MessageSent)
                 .AsQueryable();
 
-            query = messageParams.Container switch 
+            query = messageParams.Container switch
             {
                 "Inbox" => query.Where(u => u.RecipientUsername == messageParams.Username),
                 "Outbox" => query.Where(u => u.SenderUsername == messageParams.Username),
@@ -55,9 +61,33 @@ namespace API.Data
 
             return await PagedList<MessageDto>.CreateAsync(messages, messageParams.PageNumber, messageParams.PageSize);
         }
-        public async Task<IEnumerable<MessageDto>> GetMessagesThread(int currentUserId, int recipientId){
-                        throw new NotImplementedException("GetMessagesForUser method is not implemented.");
+        public async Task<IEnumerable<MessageDto>> GetMessagesThread(string currentUserName, string recipientUserName)
+        {
+            var messages = await _context.Messages
+                .Include(u => u.Sender).ThenInclude(p => p.Photos)
+                .Include(u => u.Recipient).ThenInclude(p => p.Photos)
+                .Where(
+                    m => (m.RecipientUsername == currentUserName &&
+                    m.SenderUsername == recipientUserName) ||
+                    (m.RecipientUsername == recipientUserName &&
+                    m.SenderUsername == currentUserName)
+                )
+                .OrderByDescending(m => m.MessageSent)
+                .ToListAsync();
 
+            var unreadMessages = messages.Where(m => m.DateRead == null && m.RecipientUsername == currentUserName).ToList();
+
+            if (unreadMessages.Any())
+            {
+                foreach (var message in unreadMessages)
+                {
+                    message.DateRead = DateTime.UtcNow;
+                }
+
+                await _context.SaveChangesAsync();
+            }
+
+            return _mapper.Map<IEnumerable<MessageDto>>(messages);
         }
     }
 }
