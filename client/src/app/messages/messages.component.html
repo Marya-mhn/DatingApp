@@ -1,1 +1,26 @@
-<p>messages works!</p>
+<div class="btn-group" name="container">
+  <button
+    class="btn btn-primary"
+    btnRadio="Unread"
+    [(ngModel)]="container"
+    (click)="loadMessages()"
+  >
+    <i class="fa fa-envelope"></i> Unread
+  </button>
+  <button
+    class="btn btn-primary"
+    btnRadio="Inbox"
+    [(ngModel)]="container"
+    (click)="loadMessages()"
+  >
+    <i class="fa fa-envelope-open"></i> Inbox
+  </button>
+  <button
+    class="btn btn-primary"
+    btnRadio="Outbox"
+    [(ngModel)]="container"
+    (click)="loadMessages()"
+  >
+    <i class="fa fa-paper-plane"></i> Outbox
+  </button>
+</div>
