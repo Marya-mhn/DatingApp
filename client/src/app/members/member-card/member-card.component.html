@@ -16,7 +16,11 @@
         <button (click)="addLike(member)" class="btn btn-primary">
           <i class="fa fa-heart"></i>
         </button>
-        <button class="btn btn-primary">
+        <button
+          routerLink="/members/{{ member.userName }}"
+          [queryParams]="{ tab: 'Messages' }"
+          class="btn btn-primary"
+        >
           <i class="fa fa-envelope"></i>
         </button>
       </li>
