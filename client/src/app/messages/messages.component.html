@@ -43,6 +43,7 @@
     </thead>
     <tBody class="align-middle">
       <tr
+        [hidden]="loading"
         *ngFor="let message of messages"
         [queryParams]="{ tab: 'Messages' }"
         routerLink="{{
@@ -80,7 +81,7 @@
 </div>
 <div
   class="d-flex justify-content-center"
-  *ngIf="pagination && messages && messages.length > 0"
+  *ngIf="!loading && pagination && messages && messages.length > 0"
 >
   <pagination
     [boundaryLinks]="true"
